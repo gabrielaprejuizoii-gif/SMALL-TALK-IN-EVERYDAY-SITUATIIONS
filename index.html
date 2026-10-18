@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Everyday Small Talk – Aula para Ricardo</title>
+<style>
+:root{--bg:#f6f9ff;--card:#fff;--ink:#1e2a44;--mute:#5d6b88;--blue:#3b82f6;--teal:#14b8a6;--pink:#ec4899;--amber:#f59e0b;--line:#e2e8f5;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{text-align:center;padding:36px 16px 24px;background:linear-gradient(135deg,#dbeafe,#ccfbf1 55%,#fce7f3)}
+header h1{margin:0 0 6px;font-size:clamp(1.6rem,5vw,2.4rem)}
+header p{margin:4px 0;color:var(--mute)}
+.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:99px;padding:4px 12px;font-size:.85rem}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 12px;background:rgba(246,249,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:.9rem}
+nav a:hover{background:#e8f0ff}
+main{max-width:900px;margin:0 auto;padding:16px}
+section{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin:18px 0;box-shadow:0 2px 10px rgba(59,130,246,.07)}
+h2{margin:0 0 4px;font-size:1.35rem}
+.time{display:inline-block;background:#e0f2fe;color:#0369a1;border-radius:99px;padding:2px 10px;font-size:.78rem;font-weight:600;margin-left:6px;vertical-align:middle}
+.sub{color:var(--mute);margin:0 0 14px}
+details{border:1px solid var(--line);border-radius:12px;margin:8px 0;background:#fbfdff}
+summary{cursor:pointer;padding:10px 14px;font-weight:600;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"👀 ver";float:right;font-weight:400;font-size:.8rem;color:var(--blue)}
+details[open] summary::after{content:"✖";}
+details>div{padding:0 14px 12px;color:#0f5132}
+.chat{display:flex;flex-direction:column;gap:8px;margin:10px 0}
+.b{max-width:82%;padding:9px 14px;border-radius:16px;font-size:.98rem}
+.b small{display:block;font-weight:700;font-size:.72rem;opacity:.7}
+.a{background:#dbeafe;align-self:flex-start;border-bottom-left-radius:4px}
+.t{background:#d1fae5;align-self:flex-end;border-bottom-right-radius:4px}
+.tip{background:#fff7e0;border-left:4px solid var(--amber);border-radius:8px;padding:10px 14px;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{background:#eef4ff}
+.wrap{overflow-x:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:12px}
+.fc{perspective:900px;background:none;border:0;padding:0;height:210px;cursor:pointer;font:inherit;color:inherit}
+.in{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.fc.flip .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;border:2px solid var(--line)}
+.front{background:linear-gradient(160deg,#fff,#eaf2ff)}
+.front .e{font-size:2.4rem}
+.front .w{font-size:1.35rem;font-weight:700;margin-top:6px}
+.front .h{font-size:.75rem;color:var(--mute);margin-top:8px}
+.back{background:linear-gradient(160deg,#ecfdf5,#fff);transform:rotateY(180deg);border-color:#99f6e4}
+.back .pt{font-size:1.15rem;font-weight:700;color:#0f766e}
+.back .ex{margin-top:10px;font-style:italic}
+.bar{height:10px;background:#e8eefc;border-radius:99px;overflow:hidden;margin:8px 0}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--teal));transition:width .3s}
+button.act{background:var(--blue);color:#fff;border:0;border-radius:99px;padding:8px 16px;font:inherit;cursor:pointer}
+button.act.alt{background:#fff;color:var(--blue);border:1px solid var(--blue)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+ul{padding-left:20px}
+footer{text-align:center;color:var(--mute);padding:20px 16px 36px;font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+<h1>💬 Everyday Small Talk</h1>
+<p><strong>English for Real-Life Situations</strong></p>
+<p>Aula para o Ricardo · A1–A2 · 45 minutos</p>
+<div class="chips"><span class="chip">🏦 At the bank</span><span class="chip">💊 At the pharmacy</span><span class="chip">🛒 At the supermarket</span><span class="chip">🎯 Speaking challenge</span><span class="chip">🃏 18 flashcards</span></div>
+</header>
+<nav>
+<a href="#warm">☀️ Warm-up</a><a href="#bank">🏦 Bank</a><a href="#pharm">💊 Pharmacy</a><a href="#market">🛒 Supermarket</a><a href="#speak">🎯 Challenge</a><a href="#wrap">🏁 Wrap-up</a><a href="#cards">🃏 Flashcards</a><a href="#home">🏠 Casa</a>
+</nav>
+<main>
+
+<section id="warm">
+<h2>☀️ Warm-up <span class="time">5 min</span></h2>
+<p class="sub">Responda em inglês. Frases curtas valem! Clique para ver ideias de resposta.</p>
+<details><summary>1. Have you ever talked to a stranger in a line?</summary><div>Yes, I have. / No, I haven’t. / Sometimes.</div></details>
+<details><summary>2. Do you like talking to new people?</summary><div>Yes, I do. / No, I don’t. / It depends. I’m shy. 😅</div></details>
+<details><summary>3. What do you usually say when you need help?</summary><div>Excuse me, can you help me? / Sorry, I need help.</div></details>
+<details><summary>4. Is small talk common in Brazil?</summary><div>Yes, it is. People talk a lot in lines. / Not really.</div></details>
+<div class="tip">💡 <strong>Small talk</strong> é uma conversa curta e informal, como comentar a fila ou o tempo. Você não precisa saber todas as palavras, só precisa saber <strong>continuar a conversa</strong>.</div>
+</section>
+
+<section id="bank">
+<h2>🏦 Situation 1: At the bank <span class="time">12 min</span></h2>
+<p class="sub">Primeiro só ouça (livro fechado). Depois leia junto.</p>
+<div class="chat">
+<div class="b a"><small>Anna</small>Excuse me, is this the line for the bank?</div>
+<div class="b t"><small>Tom</small>Yes, it is. The line is very long today!</div>
+<div class="b a"><small>Anna</small>Oh no. How long do I need to wait?</div>
+<div class="b t"><small>Tom</small>About twenty minutes, I think.</div>
+<div class="b a"><small>Anna</small>That’s a long time! I need to pay a bill.</div>
+<div class="b t"><small>Tom</small>Me too. Is this your first time here?</div>
+<div class="b a"><small>Anna</small>Yes, it is. Is it easy?</div>
+<div class="b t"><small>Tom</small>Yes, don’t worry. The people here are nice.</div>
+<div class="b a"><small>Anna</small>Great, thank you! Have a nice day!</div>
+<div class="b t"><small>Tom</small>You too. Good luck!</div>
+</div>
+<div class="tip">🧩 <strong>Estrutura:</strong> começar (<em>Excuse me, …</em>) → continuar (comentário + pergunta) → encerrar (<em>Thank you! Have a nice day!</em>)</div>
+<h3>❓ Comprehension</h3>
+<details><summary>Where are Anna and Tom?</summary><div>At the bank, in a line.</div></details>
+<details><summary>How long do they wait?</summary><div>About twenty minutes.</div></details>
+<details><summary>Why is Anna at the bank?</summary><div>She needs to pay a bill.</div></details>
+<h3>🔁 Substitution drill</h3>
+<ul>
+<li>The line is very <strong>long</strong> → short / slow / crowded</li>
+<li>I need to pay a <strong>bill</strong> → ask a question / open an account</li>
+<li>How long do I need to <strong>wait</strong>? → stay / be here</li>
+</ul>
+<p>🎭 <strong>Roleplay:</strong> troque de papel (Anna ↔ Tom) e depois faça sem olhar o texto, mudando um detalhe.</p>
+</section>
+
+<section id="pharm">
+<h2>💊 Situation 2: At the pharmacy <span class="time">11 min</span></h2>
+<p class="sub">Vocabulário sempre dentro de uma frase.</p>
+<div class="wrap"><table>
+<tr><th>Word</th><th>Significado</th><th>Example</th></tr>
+<tr><td>🤒 I don’t feel well</td><td>Não estou me sentindo bem</td><td>Excuse me, I don’t feel well.</td></tr>
+<tr><td>🤕 headache</td><td>dor de cabeça</td><td>I have a headache.</td></tr>
+<tr><td>😷 cough · sore throat</td><td>tosse · dor de garganta</td><td>I have a cough and a sore throat.</td></tr>
+<tr><td>🌡️ fever</td><td>febre</td><td>I have a fever.</td></tr>
+<tr><td>💊 medicine</td><td>remédio</td><td>Do you have medicine for a headache?</td></tr>
+<tr><td>📄 prescription</td><td>receita médica</td><td>Do I need a prescription?</td></tr>
+<tr><td>⏰ twice a day</td><td>duas vezes ao dia</td><td>Take one pill twice a day.</td></tr>
+</table></div>
+<h3>🗣️ Mini-dialogue</h3>
+<div class="chat">
+<div class="b t"><small>Ricardo</small>Excuse me. I don’t feel well.</div>
+<div class="b a"><small>Pharmacist</small>Oh, I’m sorry. What’s the problem?</div>
+<div class="b t"><small>Ricardo</small>I have a headache and a fever.</div>
+<div class="b a"><small>Pharmacist</small>Okay. Take one pill twice a day, after meals.</div>
+<div class="b t"><small>Ricardo</small>Do I need a prescription?</div>
+<div class="b a"><small>Pharmacist</small>No, you don’t. Anything else?</div>
+<div class="b t"><small>Ricardo</small>No, thank you.</div>
+</div>
+<details><summary>How many pills? When?</summary><div>One pill, twice a day, after meals.</div></details>
+<p>🎭 <strong>Variações:</strong> troque o sintoma · o farmacêutico fala rápido (use <em>Sorry, can you repeat that?</em>) · você esqueceu a palavra (use <em>I’m not sure, but…</em>).</p>
+</section>
+
+<section id="market">
+<h2>🛒 Situation 3: At the supermarket <span class="time">extra</span></h2>
+<p class="sub">Perguntar onde fica um produto, saber o preço e pedir ajuda.</p>
+<div class="wrap"><table>
+<tr><th>Word</th><th>Significado</th><th>Example</th></tr>
+<tr><td>🛒 aisle</td><td>corredor</td><td>The milk is in aisle three.</td></tr>
+<tr><td>🗄️ shelf</td><td>prateleira</td><td>It’s on the top shelf.</td></tr>
+<tr><td>💰 How much is it?</td><td>Quanto custa?</td><td>Excuse me, how much is this milk?</td></tr>
+<tr><td>🏷️ expensive · cheaper</td><td>caro · mais barato</td><td>This is expensive. Is there a cheaper one?</td></tr>
+<tr><td>🙋 Where is…?</td><td>Onde fica…?</td><td>Excuse me, where is the milk?</td></tr>
+</table></div>
+<h3>🗣️ Mini-dialogue</h3>
+<div class="chat">
+<div class="b t"><small>Ricardo</small>Excuse me, where is the milk?</div>
+<div class="b a"><small>Employee</small>It’s in aisle three, next to the cheese.</div>
+<div class="b t"><small>Ricardo</small>Thank you. How much is this milk?</div>
+<div class="b a"><small>Employee</small>It’s six reais.</div>
+<div class="b t"><small>Ricardo</small>Hmm, that’s expensive. Is there a cheaper one?</div>
+<div class="b a"><small>Employee</small>Yes, this one is cheaper. It’s five reais.</div>
+<div class="b t"><small>Ricardo</small>Great, I’ll take it. Thanks for your help!</div>
+<div class="b a"><small>Employee</small>You’re welcome!</div>
+</div>
+<details><summary>Where is the milk? How much is the cheaper one?</summary><div>In aisle three, next to the cheese. The cheaper one is five reais.</div></details>
+<p>🎭 <strong>Variações:</strong> troque o produto (bread, rice, eggs) · o funcionário fala rápido (use <em>Could you speak more slowly?</em>) · você não encontra o produto (use <em>Can you help me, please?</em>).</p>
+</section>
+
+<section id="speak">
+<h2>🎯 Speaking Challenge <span class="time">12 min</span></h2>
+<p class="sub"><strong>“What would you say in this situation?”</strong> Pense 10–15 segundos, tente, e só então veja a pista e a resposta-modelo.</p>
+<div class="wrap"><table>
+<tr><th>Quando eu…</th><th>Eu posso dizer</th></tr>
+<tr><td>não entendi</td><td>Sorry, can you repeat that?</td></tr>
+<tr><td>a pessoa fala rápido</td><td>Could you speak more slowly?</td></tr>
+<tr><td>não conheço uma palavra</td><td>What does this mean?</td></tr>
+<tr><td>não sei dizer algo</td><td>How do you say ___ in English?</td></tr>
+<tr><td>preciso de tempo</td><td>Let me think.</td></tr>
+<tr><td>não tenho certeza</td><td>I’m not sure, but…</td></tr>
+<tr><td>preciso de ajuda</td><td>Can you help me, please?</td></tr>
+</table></div>
+<div id="scen"></div>
+</section>
+
+<section id="wrap">
+<h2>🏁 Wrap-up <span class="time">5 min</span></h2>
+<ul>
+<li>🧠 Diga <strong>5 palavras ou expressões</strong> sem olhar o material.</li>
+<li>❓ <em>You’re at the bank. The line is long. What do you say?</em></li>
+<li>❓ <em>You don’t understand the pharmacist. What do you say?</em></li>
+<li>🎭 Encene uma conversa curta de fila sem ler o diálogo.</li>
+</ul>
+<div class="tip">⭐ <strong>3 expressões da semana:</strong> Excuse me, … · Sorry, can you repeat that? · How long do I need to wait?</div>
+</section>
+
+<section id="cards">
+<h2>🃏 Flashcards <span class="time">18 cards</span></h2>
+<p class="sub">Clique no cartão para virar: na frente, o inglês; no verso, a tradução e uma frase de exemplo. Tente lembrar antes de virar!</p>
+<div class="row"><div style="flex:1;min-width:140px"><div class="bar"><i id="pb"></i></div></div><span id="pc">0 / 18 virados</span><button class="act alt" id="sh">🔀 Embaralhar</button><button class="act" id="rs">↺ Reiniciar</button></div>
+<div class="grid" id="grid"></div>
+<h3>📅 Revisão espaçada (sugestão)</h3>
+<div class="chips" style="justify-content:flex-start"><span class="chip">Dia 1 · revisar</span><span class="chip">Dia 2 · sem consultar</span><span class="chip">Dia 4 · os difíceis</span><span class="chip">Dia 7 · teste</span><span class="chip">Dia 14 · acumulada</span><span class="chip">Dia 30 · manutenção</span></div>
+<p class="sub" style="margin-top:8px">As datas são sugestão. Os cartões que você errar voltam com mais frequência.</p>
+</section>
+
+<section id="home">
+<h2>🏠 Para casa <span class="time">10–15 min</span></h2>
+<ul>
+<li>🎙️ Grave um áudio de 30–40 s: <em>“Excuse me, is this the line for the bank? How long do I need to wait?”</em> e duas frases sobre como você se sente.</li>
+<li>🔁 Use <em>Sorry, can you repeat that?</em> pelo menos uma vez em inglês durante a semana.</li>
+<li>🃏 Revise os flashcards conforme o cronograma.</li>
+</ul>
+</section>
+</main>
+<footer>Next lessons: 🥖 bakery &amp; grocery · ☕ coffee shop &amp; bus stop · 🛒 supermarket</footer>
+
+<script>
+var cards=[
+["🧍","line","fila","The line is very long today."],
+["⏳","wait","esperar","How long do I need to wait?"],
+["🧾","bill","conta / fatura","I need to pay a bill."],
+["🙋","Excuse me","com licença","Excuse me, can you help me?"],
+["😌","Don’t worry","não se preocupe","Don’t worry, it’s easy."],
+["👋","Have a nice day!","tenha um bom dia!","Thank you! Have a nice day!"],
+["🤒","I don’t feel well","não estou me sentindo bem","Excuse me, I don’t feel well."],
+["🤕","headache","dor de cabeça","I have a headache."],
+["💊","medicine","remédio","Do you have medicine for a headache?"],
+["📄","prescription","receita médica","Do I need a prescription?"],
+["⏰","twice a day","duas vezes ao dia","Take one pill twice a day."],
+["🔁","Can you repeat that?","você pode repetir?","Sorry, can you repeat that?"],
+["🐢","speak more slowly","falar mais devagar","Could you speak more slowly, please?"],
+["💬","How do you say…?","como se diz…?","How do you say “remédio” in English?"],
+["🤔","Let me think","deixe-me pensar","Let me think… I’m not sure, but…"],
+["🛒","aisle","corredor","The milk is in aisle three."],
+["💰","How much is it?","quanto custa?","Excuse me, how much is this milk?"],
+["🏷️","cheaper","mais barato","Is there a cheaper one?"]
+];
+var seen={};
+function render(list){
+  var g=document.getElementById("grid");g.innerHTML="";
+  list.forEach(function(c){
+    var b=document.createElement("button");b.className="fc";b.type="button";
+    b.innerHTML='<div class="in"><div class="face front"><div class="e">'+c[0]+'</div><div class="w">'+c[1]+'</div><div class="h">👆 toque para virar</div></div><div class="face back"><div class="pt">'+c[2]+'</div><div class="ex">“'+c[3]+'”</div></div></div>';
+    b.onclick=function(){b.classList.toggle("flip");seen[c[1]]=1;upd()};
+    g.appendChild(b);
+  });
+}
+function upd(){var n=Object.keys(seen).length;document.getElementById("pc").textContent=n+" / "+cards.length+" virados";document.getElementById("pb").style.width=(n/cards.length*100)+"%"}
+document.getElementById("sh").onclick=function(){var l=cards.slice().sort(function(){return Math.random()-.5});render(l)};
+document.getElementById("rs").onclick=function(){seen={};render(cards);upd()};
+render(cards);
+
+var sc=[
+["🏦","You are in a long line at the bank. What can you say to the person next to you?","The line…","The line is very long today! / How long do I need to wait?"],
+["💊","You need medicine but don’t know the name in English. How can you explain?","I don’t feel well. I have…","Excuse me, I don’t feel well. I have a headache. Do you have medicine?"],
+["🥖","You are at a bakery and want to ask for a quantity.","Can I have…","Can I have two breads, please?"],
+["🐇","Someone speaks too fast. What can you say?","Sorry, could you…","Sorry, could you speak more slowly, please?"],
+["🛒","You want to know where a product is in the supermarket.","Excuse me, where is…","Excuse me, where is the milk, please?"]
+];
+document.getElementById("scen").innerHTML=sc.map(function(s,i){
+  return '<details><summary>'+s[0]+' '+(i+1)+'. '+s[1]+'</summary><div><p>💡 <strong>Starter:</strong> '+s[2]+'</p><p>✅ <strong>Model:</strong> '+s[3]+'</p><p>🔄 Agora diga de novo com suas próprias palavras!</p></div></details>';
+}).join("");
+</script>
+</body>
+</html>
